@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { db } from '../firebase';
+import { addDoc, collection } from 'firebase/firestore';
 
 function CreatePost() {
   const [title, setTitle] = useState('');
@@ -11,6 +13,15 @@ function CreatePost() {
     console.log(title);
     console.log(subtitle);
     console.log(content);
+
+    const data = collection(db, 'content');
+
+    addDoc(data, {
+      title,
+      subtitle,
+      content,
+      createdAt: new Date(),
+    });
   }
   return (
     <div className="create-post">
