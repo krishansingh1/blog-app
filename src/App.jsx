@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <p>React Blog App using Hooks</p>
     </div>
   );
