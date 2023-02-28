@@ -16,7 +16,7 @@ function PostDetail() {
         setPost(snapshot.data());
       }
     });
-  }, []);
+  }, [postId]);
 
   return (
     <div className="post-detail">
