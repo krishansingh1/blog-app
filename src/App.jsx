@@ -1,9 +1,13 @@
-
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="container">
-      <p>React Blog App using Hooks</p>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/post/:postId" component={PostDetail} />
+        <Route path="/create-post" component={CreatePost} />
+      </Switch>
     </div>
   );
 }
