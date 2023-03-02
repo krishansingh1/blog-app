@@ -38,3 +38,9 @@ function Home() {
 }
 
 export default Home;
+
+// const styles = {
+//   heading: {
+//     fontSize: "3rem",
+//   },
+// };
